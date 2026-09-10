@@ -6,20 +6,20 @@ Utility-first CSS framework for interactive **Liquid Glass** surfaces — refrac
 
 | Package | Description |
 | --- | --- |
-| [`liquidcss`](packages/core) | Core engine, utility classes, default theme, SVG refraction filters |
-| [`@liquidcss/postcss`](packages/postcss-plugin) | PostCSS plugin: `@liquidcss theme;` / `@liquidcss utilities;` |
-| [`@liquidcss/cli`](packages/cli) | Standalone CLI: `liquidcss init\|build\|watch` |
-| [`@liquidcss/interactions`](packages/interactions) | Optional <3kb JS: cursor-tracked tilt, click-positioned ripple |
+| [`@ferdintel/liquidcss`](packages/core) | Core engine, utility classes, default theme, SVG refraction filters |
+| [`@ferdintel/liquidcss-postcss`](packages/postcss-plugin) | PostCSS plugin: `@liquidcss theme;` / `@liquidcss utilities;` |
+| [`@ferdintel/liquidcss-cli`](packages/cli) | Standalone CLI: `liquidcss init\|build\|watch` |
+| [`@ferdintel/liquidcss-interactions`](packages/interactions) | Optional <3kb JS: cursor-tracked tilt, click-positioned ripple |
 
 ## Quick start (PostCSS / Vite / Next.js)
 
 ```bash
-pnpm add liquidcss @liquidcss/postcss
+pnpm add @ferdintel/liquidcss @ferdintel/liquidcss-postcss
 ```
 
 ```js
 // postcss.config.js
-import liquidcss from "@liquidcss/postcss";
+import liquidcss from "@ferdintel/liquidcss-postcss";
 
 export default {
   plugins: [liquidcss({ content: ["./index.html", "./src/**/*.{html,js,ts,jsx,tsx}"] })],
@@ -32,7 +32,7 @@ export default {
 @liquidcss utilities;
 ```
 
-Include the refraction filter sprite once in your HTML (copy it with `npx liquidcss init`, or import `liquidcss/filters.svg` as raw text):
+Include the refraction filter sprite once in your HTML (copy it with `npx liquidcss init`, or import `@ferdintel/liquidcss/filters.svg` as raw text):
 
 ```html
 <div id="liquidcss-filters" aria-hidden="true"><!-- paste liquidcss/filters.svg here --></div>
@@ -41,7 +41,7 @@ Include the refraction filter sprite once in your HTML (copy it with `npx liquid
 ## Quick start (standalone CLI, no bundler)
 
 ```bash
-pnpm add liquidcss @liquidcss/cli
+pnpm add @ferdintel/liquidcss @ferdintel/liquidcss-cli
 npx liquidcss init   # scaffolds liquidcss.config.json + copies the SVG filter sprite
 npx liquidcss build  # writes ./liquidcss/liquidcss.css
 ```
@@ -53,8 +53,8 @@ npx liquidcss build  # writes ./liquidcss/liquidcss.css
 - `lg-refract-{1..5}`, `lg-lens`, `lg-wave` — edge refraction via SVG `feDisplacementMap`
 - `lg-sheen`, `lg-sheen-{deg}`, `lg-sheen-[<value>]` — angle-gradient reflection
 - `lg-shine-hover` — hover sweep reflection
-- `lg-tilt` — perspective tilt on hover (add `@liquidcss/interactions` for real cursor tracking via `data-lg-tilt`)
-- `lg-ripple` — centered ripple on `:active` (add `@liquidcss/interactions` for a click-positioned ripple via `data-lg-ripple`)
+- `lg-tilt` — perspective tilt on hover (add `@ferdintel/liquidcss-interactions` for real cursor tracking via `data-lg-tilt`)
+- `lg-ripple` — centered ripple on `:active` (add `@ferdintel/liquidcss-interactions` for a click-positioned ripple via `data-lg-ripple`)
 
 All utilities support `hover:`, `focus:`, `active:`, `dark:` and responsive (`sm:` … `2xl:`) variant prefixes.
 

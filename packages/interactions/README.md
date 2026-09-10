@@ -1,13 +1,13 @@
-# @liquidcss/interactions
+# @ferdintel/liquidcss-interactions
 
 Optional progressive-enhancement JS for [LiquidCSS](../../README.md) (<3kb gzip, zero dependencies).
 
 ```bash
-pnpm add @liquidcss/interactions
+pnpm add @ferdintel/liquidcss-interactions
 ```
 
 ```js
-import "@liquidcss/interactions"; // auto-initializes on DOMContentLoaded
+import "@ferdintel/liquidcss-interactions"; // auto-initializes on DOMContentLoaded
 ```
 
 ```html

@@ -6,7 +6,7 @@ import { createRequire } from "node:module";
 import { pathToFileURL } from "node:url";
 import { cac } from "cac";
 import chokidar from "chokidar";
-import { build } from "liquidcss";
+import { build } from "@ferdintel/liquidcss";
 
 const require = createRequire(import.meta.url);
 
@@ -35,7 +35,7 @@ async function loadConfig(cwd: string): Promise<{ config: LiquidConfig; configPa
 }
 
 function resolvePackageFile(relative: string): string {
-  const packageJsonPath = require.resolve("liquidcss/package.json");
+  const packageJsonPath = require.resolve("@ferdintel/liquidcss/package.json");
   return path.join(path.dirname(packageJsonPath), relative);
 }
 

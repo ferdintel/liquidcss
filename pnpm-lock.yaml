@@ -139,17 +139,17 @@ importers:
 
   apps/docs:
     dependencies:
-      '@liquidcss/interactions':
-        specifier: workspace:*
-        version: link:../../packages/interactions
-      liquidcss:
+      '@ferdintel/liquidcss':
         specifier: workspace:*
         version: link:../../packages/core
+      '@ferdintel/liquidcss-interactions':
+        specifier: workspace:*
+        version: link:../../packages/interactions
     devDependencies:
-      '@liquidcss/cli':
+      '@ferdintel/liquidcss-cli':
         specifier: workspace:*
         version: link:../../packages/cli
-      '@liquidcss/postcss':
+      '@ferdintel/liquidcss-postcss':
         specifier: workspace:*
         version: link:../../packages/postcss-plugin
       concurrently:
@@ -164,15 +164,15 @@ importers:
 
   packages/cli:
     dependencies:
+      '@ferdintel/liquidcss':
+        specifier: workspace:*
+        version: link:../core
       cac:
         specifier: ^6.7.14
         version: 6.7.14
       chokidar:
         specifier: ^4.0.1
         version: 4.0.3
-      liquidcss:
-        specifier: workspace:*
-        version: link:../core
     devDependencies:
       tsup:
         specifier: ^8.3.0
@@ -220,7 +220,7 @@ importers:
 
   packages/postcss-plugin:
     dependencies:
-      liquidcss:
+      '@ferdintel/liquidcss':
         specifier: workspace:*
         version: link:../core
     devDependencies:

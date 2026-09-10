@@ -1,12 +1,24 @@
 {
-  "name": "liquidcss",
-  "version": "0.0.1",
+  "name": "@ferdintel/liquidcss",
+  "version": "0.0.2",
   "description": "Utility-first CSS framework for interactive Liquid Glass surfaces (refraction, angle sheens, hover shine, ripple).",
   "type": "module",
   "license": "MIT",
   "author": "ferdintel",
-  "keywords": ["css", "utility-first", "liquid-glass", "glassmorphism", "backdrop-filter", "svg-filter", "refraction"],
-  "repository": { "type": "git", "url": "git+https://github.com/ferdintel/liquidcss.git", "directory": "packages/core" },
+  "keywords": [
+    "css",
+    "utility-first",
+    "liquid-glass",
+    "glassmorphism",
+    "backdrop-filter",
+    "svg-filter",
+    "refraction"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferdintel/liquidcss.git",
+    "directory": "packages/core"
+  },
   "homepage": "https://github.com/ferdintel/liquidcss#readme",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",

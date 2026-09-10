@@ -1,4 +1,4 @@
-import liquidcss from "@liquidcss/postcss";
+import liquidcss from "@ferdintel/liquidcss-postcss";
 
 export default {
   plugins: [

@@ -1,4 +1,4 @@
-# @liquidcss/cli
+# @ferdintel/liquidcss-cli
 
 Standalone CLI for [LiquidCSS](../../README.md), for projects without a PostCSS pipeline.
 

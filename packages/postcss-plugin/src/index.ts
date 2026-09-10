@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { createRequire } from "node:module";
 import postcss, { type Plugin } from "postcss";
-import { build } from "liquidcss";
+import { build } from "@ferdintel/liquidcss";
 
 const require = createRequire(import.meta.url);
 
@@ -26,7 +26,7 @@ export default function liquidcss(options: LiquidcssPostcssOptions): Plugin {
         const directive = atrule.params.trim();
 
         if (directive === "theme") {
-          const themePath = require.resolve("liquidcss/theme.css");
+          const themePath = require.resolve("@ferdintel/liquidcss/theme.css");
           const css = await readFile(themePath, "utf8");
           atrule.replaceWith(postcss.parse(css));
           return;

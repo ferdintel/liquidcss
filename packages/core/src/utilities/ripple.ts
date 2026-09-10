@@ -1,7 +1,7 @@
 import type { UtilityRegistry } from "../engine/types.js";
 
 /** Centered ripple pulse on `:active` (pure CSS). For a ripple that starts at the
- * click point, use the optional `@liquidcss/interactions` `data-lg-ripple` enhancer. */
+ * click point, use the optional `@ferdintel/liquidcss-interactions` `data-lg-ripple` enhancer. */
 export const rippleUtilities: UtilityRegistry = {
   static: {
     "lg-ripple": [

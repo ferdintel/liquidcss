@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "filters:init": "liquidcss init",
@@ -11,12 +11,12 @@
     "visual-check": "pnpm build && node scripts/visual-check.mjs"
   },
   "dependencies": {
-    "@liquidcss/interactions": "workspace:*",
-    "liquidcss": "workspace:*"
+    "@ferdintel/liquidcss-interactions": "workspace:*",
+    "@ferdintel/liquidcss": "workspace:*"
   },
   "devDependencies": {
-    "@liquidcss/cli": "workspace:*",
-    "@liquidcss/postcss": "workspace:*",
+    "@ferdintel/liquidcss-cli": "workspace:*",
+    "@ferdintel/liquidcss-postcss": "workspace:*",
     "concurrently": "^9.0.1",
     "playwright": "^1.63.0",
     "vite": "^5.4.10"

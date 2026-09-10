@@ -3,7 +3,7 @@ import type { UtilityRegistry } from "../engine/types.js";
 /**
  * CSS-only hover shine (sweeps the sheen layer on :hover) and a static tilt
  * (perspective + rotation) — no cursor tracking here, that needs the optional
- * `@liquidcss/interactions` package for a real mouse-following highlight.
+ * `@ferdintel/liquidcss-interactions` package for a real mouse-following highlight.
  */
 export const shineUtilities: UtilityRegistry = {
   static: {
