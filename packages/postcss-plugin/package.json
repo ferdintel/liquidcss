@@ -4,9 +4,10 @@
   "description": "PostCSS plugin for LiquidCSS — replaces @liquidcss theme; and @liquidcss utilities; with the compiled Liquid Glass CSS.",
   "type": "module",
   "license": "MIT",
+  "author": "ferdintel",
   "keywords": ["css", "postcss-plugin", "liquid-glass"],
-  "repository": { "type": "git", "url": "git+https://github.com/liquidcss/liquidcss.git", "directory": "packages/postcss-plugin" },
-  "homepage": "https://github.com/liquidcss/liquidcss#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/ferdintel/liquidcss.git", "directory": "packages/postcss-plugin" },
+  "homepage": "https://github.com/ferdintel/liquidcss#readme",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {

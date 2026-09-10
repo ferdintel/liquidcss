@@ -4,9 +4,10 @@
   "description": "CLI for LiquidCSS — init, build and watch your Liquid Glass utility CSS.",
   "type": "module",
   "license": "MIT",
+  "author": "ferdintel",
   "keywords": ["css", "liquid-glass", "cli", "jit"],
-  "repository": { "type": "git", "url": "git+https://github.com/liquidcss/liquidcss.git", "directory": "packages/cli" },
-  "homepage": "https://github.com/liquidcss/liquidcss#readme",
+  "repository": { "type": "git", "url": "git+https://github.com/ferdintel/liquidcss.git", "directory": "packages/cli" },
+  "homepage": "https://github.com/ferdintel/liquidcss#readme",
   "bin": {
     "liquidcss": "./dist/cli.js"
   },
