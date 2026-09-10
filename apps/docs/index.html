@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LiquidCSS — Liquid Glass utility framework</title>
+    <link rel="stylesheet" href="./src/liquidcss.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="wallpaper"></div>
+
+    <main class="gallery">
+      <h1 class="title">LiquidCSS</h1>
+      <p class="subtitle">Utility-first Liquid Glass — refraction · sheen · shine · ripple</p>
+
+      <section class="grid">
+        <article class="lg-glass card">
+          <h2>lg-glass</h2>
+          <p>Base glass surface: blur + saturate + translucent border.</p>
+        </article>
+
+        <article class="lg-glass lg-blur-xl card">
+          <h2>lg-blur-xl</h2>
+          <p>Adaptive blur scale, strongest preset.</p>
+        </article>
+
+        <article class="lg-glass lg-refract-3 card">
+          <h2>lg-refract-3</h2>
+          <p>Edge refraction via SVG feDisplacementMap.</p>
+        </article>
+
+        <article class="lg-glass lg-lens card">
+          <h2>lg-lens</h2>
+          <p>Magnifying-glass style distortion preset.</p>
+        </article>
+
+        <article class="lg-glass lg-sheen card">
+          <h2>lg-sheen</h2>
+          <p>Angle-gradient reflection, pure CSS.</p>
+        </article>
+
+        <article class="lg-glass lg-shine-hover card">
+          <h2>lg-shine-hover</h2>
+          <p>Hover to sweep the reflection across the surface.</p>
+        </article>
+
+        <article class="lg-glass lg-tilt card" data-lg-tilt>
+          <h2>lg-tilt</h2>
+          <p>Move the cursor over this card — real tilt via <code>@liquidcss/interactions</code>.</p>
+        </article>
+
+        <button class="lg-glass lg-ripple card" data-lg-ripple>
+          <h2>lg-ripple</h2>
+          <p>Click anywhere on this button.</p>
+        </button>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>

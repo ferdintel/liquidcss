@@ -1,0 +1,58 @@
+/*
+ * LiquidCSS default theme — CSS-first tokens, plain `:root` custom properties.
+ * Override any variable in your own stylesheet (after this import) to re-theme the framework.
+ */
+:root {
+  /* Glass surface */
+  --lg-tint: 255 255 255;
+  --lg-tint-opacity: 0.14;
+  --lg-border-opacity: 0.35;
+  --lg-shadow-color: 0 0 0;
+
+  /* Adaptive blur scale (blur + saturate move together) */
+  --lg-blur-sm: 6px;
+  --lg-blur-md: 14px;
+  --lg-blur-lg: 24px;
+  --lg-blur-xl: 40px;
+  --lg-saturate-sm: 1.1;
+  --lg-saturate-md: 1.3;
+  --lg-saturate-lg: 1.5;
+  --lg-saturate-xl: 1.7;
+
+  /* Refraction (edge displacement) intensities, mapped to SVG filter presets */
+  --lg-refract-1-scale: 6;
+  --lg-refract-2-scale: 12;
+  --lg-refract-3-scale: 20;
+  --lg-refract-4-scale: 32;
+  --lg-refract-5-scale: 48;
+
+  /* Angle sheen (reflection gradient) */
+  --lg-sheen-angle: 115deg;
+  --lg-sheen-color: 255 255 255;
+  --lg-sheen-opacity: 0.55;
+
+  /* Hover shine / tilt */
+  --lg-shine-duration: 900ms;
+  --lg-tilt-perspective: 800px;
+  --lg-tilt-rotate: 6deg;
+
+  /* Ripple */
+  --lg-ripple-duration: 650ms;
+  --lg-ripple-color: 255 255 255;
+}
+
+
+.lg-blur-xl { backdrop-filter: blur(var(--lg-blur-xl)) saturate(var(--lg-saturate-xl)); -webkit-backdrop-filter: blur(var(--lg-blur-xl)) saturate(var(--lg-saturate-xl)); }
+.lg-glass { position: relative; background-color: rgb(var(--lg-tint) / var(--lg-tint-opacity)); border: 1px solid rgb(var(--lg-tint) / var(--lg-border-opacity)); border-radius: var(--lg-radius, 16px); box-shadow: 0 1px 1px rgb(var(--lg-shadow-color) / 0.05), 0 8px 24px rgb(var(--lg-shadow-color) / 0.12), inset 0 1px 0 rgb(255 255 255 / 0.25); backdrop-filter: blur(var(--lg-blur-md)) saturate(var(--lg-saturate-md)); -webkit-backdrop-filter: blur(var(--lg-blur-md)) saturate(var(--lg-saturate-md)); }
+.lg-lens { backdrop-filter: blur(var(--lg-blur-lg)) saturate(var(--lg-saturate-lg)) url(#lg-lens); -webkit-backdrop-filter: blur(var(--lg-blur-lg)) saturate(var(--lg-saturate-lg)); filter: url(#lg-lens); }
+.lg-refract-3 { backdrop-filter: blur(var(--lg-blur-md)) saturate(var(--lg-saturate-md)) url(#lg-refract-3); -webkit-backdrop-filter: blur(var(--lg-blur-md)) saturate(var(--lg-saturate-md)); filter: url(#lg-refract-3); }
+.lg-ripple { position: relative; overflow: hidden; }
+.lg-ripple::after { content: ""; position: absolute; inset: 0; margin: auto; width: 0; height: 0; border-radius: 999px; background: radial-gradient(circle, rgb(var(--lg-ripple-color) / 0.5) 0%, transparent 70%); opacity: 0; pointer-events: none; transition: width var(--lg-ripple-duration) ease, height var(--lg-ripple-duration) ease, opacity var(--lg-ripple-duration) ease; }
+.lg-ripple:active::after { width: 200%; height: 200%; opacity: 1; transition-duration: 0ms; }
+.lg-sheen { position: relative; overflow: hidden; }
+.lg-sheen::before { content: ""; position: absolute; inset: -60% -20%; background: linear-gradient(var(--lg-sheen-angle), transparent 42%, rgb(var(--lg-sheen-color) / var(--lg-sheen-opacity)) 50%, transparent 58%); mix-blend-mode: overlay; pointer-events: none; transition: transform var(--lg-shine-duration) ease; }
+.lg-shine-hover { position: relative; overflow: hidden; }
+.lg-shine-hover::before { content: ""; position: absolute; inset: -60% -20%; background: linear-gradient(var(--lg-sheen-angle), transparent 42%, rgb(var(--lg-sheen-color) / var(--lg-sheen-opacity)) 50%, transparent 58%); transform: translateX(-30%); mix-blend-mode: overlay; pointer-events: none; transition: transform var(--lg-shine-duration) ease; }
+.lg-shine-hover:hover::before { transform: translateX(30%); }
+.lg-tilt { transition: transform var(--lg-shine-duration) ease; transform-style: preserve-3d; will-change: transform; }
+.lg-tilt:hover { transform: perspective(var(--lg-tilt-perspective)) rotateX(var(--lg-tilt-rotate)) rotateY(var(--lg-tilt-rotate)); }

@@ -1,0 +1,32 @@
+{
+  "name": "@liquidcss/interactions",
+  "version": "0.0.1",
+  "description": "Optional progressive-enhancement JS for LiquidCSS: cursor-tracked tilt highlight and click-positioned ripple. Zero dependencies, <3kb gzip.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["css", "liquid-glass", "tilt", "ripple", "progressive-enhancement"],
+  "repository": { "type": "git", "url": "git+https://github.com/liquidcss/liquidcss.git", "directory": "packages/interactions" },
+  "homepage": "https://github.com/liquidcss/liquidcss#readme",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "unpkg": "./dist/index.global.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs,iife --global-name LiquidInteractions --dts --clean --minify",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "jsdom": "^25.0.1"
+  }
+}

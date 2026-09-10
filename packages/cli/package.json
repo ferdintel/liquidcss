@@ -1,0 +1,28 @@
+{
+  "name": "@liquidcss/cli",
+  "version": "0.0.1",
+  "description": "CLI for LiquidCSS — init, build and watch your Liquid Glass utility CSS.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["css", "liquid-glass", "cli", "jit"],
+  "repository": { "type": "git", "url": "git+https://github.com/liquidcss/liquidcss.git", "directory": "packages/cli" },
+  "homepage": "https://github.com/liquidcss/liquidcss#readme",
+  "bin": {
+    "liquidcss": "./dist/cli.js"
+  },
+  "main": "./dist/cli.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --clean",
+    "dev": "tsup src/cli.ts --format esm --watch"
+  },
+  "dependencies": {
+    "liquidcss": "workspace:*",
+    "chokidar": "^4.0.1",
+    "cac": "^6.7.14"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0"
+  }
+}
